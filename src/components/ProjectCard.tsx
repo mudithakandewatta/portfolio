@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FiExternalLink, FiGithub } from 'react-icons/fi'
+import { FiExternalLink, FiGithub, FiStar } from 'react-icons/fi'
 import type { Project } from '../data/projects'
 import { createImageResolver } from '../lib/images'
 
@@ -16,9 +16,18 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
-      className="group rounded-2xl border border-border bg-surface overflow-hidden hover:border-accent/60 transition-colors flex flex-col"
+      className={`group rounded-2xl border bg-surface overflow-hidden transition-colors flex flex-col ${
+        project.featured
+          ? 'border-accent/70 ring-1 ring-accent/30 hover:border-accent'
+          : 'border-border hover:border-accent/60'
+      }`}
     >
-      <div className="aspect-[8/5] overflow-hidden bg-surface-2">
+      <div className="relative aspect-[8/5] overflow-hidden bg-surface-2">
+        {project.featured && (
+          <span className="absolute top-3 left-3 z-10 flex items-center gap-1 rounded-full bg-accent text-white text-xs font-medium px-2.5 py-1 shadow-lg">
+            <FiStar size={12} /> Featured
+          </span>
+        )}
         <img
           src={resolveProjectImage(project.image)}
           alt={project.title}

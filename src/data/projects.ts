@@ -12,6 +12,16 @@ export interface Project {
 // Add your real GitHub/demo links once available — left blank rather than guessed.
 export const projects: Project[] = [
   {
+    title: 'Crop Disease Detection',
+    description:
+      'A deep learning tool that identifies common crop diseases from leaf photos, helping farmers catch problems early and reduce yield loss. Built a CNN image classifier trained on labeled leaf-image data, with a preprocessing pipeline for augmentation and normalization, and a simple web interface for real-time predictions from an uploaded photo.',
+    image: 'crop-disease-detection',
+    tags: ['Python', 'TensorFlow', 'Keras', 'CNN', 'OpenCV', 'NumPy', 'Flask'],
+    github: '',
+    demo: '',
+    featured: true,
+  },
+  {
     title: 'HealthLink – Smart Healthcare Platform',
     description:
       'A healthcare management platform built for a real-world client on the MERN stack, with patient management, appointment scheduling, and doctor record handling. Integrated a machine learning-based doctor recommendation feature. Role: Team Leader.',
@@ -83,15 +93,6 @@ export const projects: Project[] = [
       'A personal library app to catalog, search, and track books you own or want to read, with an AI-assisted version that scans book spines to add them automatically.',
     image: 'bookshelf-manager',
     tags: ['React', 'TypeScript', 'Computer Vision'],
-    github: '',
-    demo: '',
-  },
-  {
-    title: 'Crop Disease Detection',
-    description:
-      'An image-based tool that identifies common crop diseases from leaf photos, helping farmers act early and reduce yield loss.',
-    image: 'crop-disease-detection',
-    tags: ['Python', 'Machine Learning', 'Computer Vision'],
     github: '',
     demo: '',
   },
