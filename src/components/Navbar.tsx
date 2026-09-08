@@ -27,7 +27,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         <a href="#top" className="font-display font-semibold text-lg tracking-tight">
-          Muditha<span className="text-accent">.Kandewatta</span>
+          Muditha<span className="text-accent"> Kandewatta</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8 text-sm text-text-muted">
