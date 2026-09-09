@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     title: 'Crop Disease Detection',
     description:
-      "A deep learning tool that identifies 38 common crop diseases from leaf photos, helping farmers catch problems early and reduce yield loss. Built a CNN image classifier with a preprocessing pipeline for augmentation and normalization, served through a Flask web app for real-time predictions from an uploaded photo. Closes the loop with a human-in-the-loop feedback system: after every prediction, users confirm it or correct it from the full class list, and corrections are logged with a timestamp, predicted label, confidence, and the corrected label. A retraining script fine-tunes the model on accumulated feedback, locking class ordering to the original class_indices.json so corrections never scramble the model's output indices.",
+      'A CNN-based classifier that detects 38 crop diseases from a leaf photo, served through a Flask app. Includes a human-in-the-loop feedback system — users confirm or correct each prediction, and corrections feed a retraining pipeline that improves the model over time.',
     image: 'crop-disease-detection',
     tags: ['Python', 'TensorFlow', 'Keras', 'CNN', 'OpenCV', 'Flask', 'Human-in-the-loop', 'Model Fine-tuning'],
     github: '',
