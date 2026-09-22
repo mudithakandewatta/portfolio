@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 const links = [
   { href: '#about', label: 'About' },
@@ -30,29 +31,33 @@ export default function Navbar() {
           Muditha<span className="text-accent"> Kandewatta</span>
         </a>
 
-        <ul className="hidden md:flex items-center gap-8 text-sm text-text-muted">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} className="hover:text-text transition-colors">
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-6">
+          <ul className="hidden md:flex items-center gap-8 text-sm text-text-muted">
+            {links.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} className="hover:text-text transition-colors">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        <button
-          className="md:hidden text-text-muted"
-          onClick={() => setOpen((o) => !o)}
-          aria-label="Toggle menu"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-            {open ? (
-              <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
-            ) : (
-              <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
-            )}
-          </svg>
-        </button>
+          <ThemeToggle />
+
+          <button
+            className="md:hidden text-text-muted"
+            onClick={() => setOpen((o) => !o)}
+            aria-label="Toggle menu"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+              {open ? (
+                <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+              ) : (
+                <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {open && (

@@ -6,7 +6,7 @@ export const profile = {
   location: 'Panadura, Sri Lanka',
   email: 'mudithasankalpa3@gmail.com',
   resumeUrl: '/resume.pdf',
-  avatar: '/images/profile.jpg',
+  avatar: '/images/profile.png',
   socials: {
     github: 'https://github.com/Muditha-Sankalpa',
     linkedin: 'https://www.linkedin.com/in/muditha-kandewatta-a86a17276',
